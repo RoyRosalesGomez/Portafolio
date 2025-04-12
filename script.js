@@ -42,30 +42,7 @@ function efectoHabilidades() {
 
 //Correo
 
-const form = document.getElementById("formulario-contacto");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Evita el envío normal del formulario
-
-
-  const datos = new FormData(form);
-console.log("Datos enviados:", [...datos.entries()]);
-
-fetch("https://script.google.com/macros/s/AKfycbzz-DukvmTXwSACD34_pNT5TJMm6ahMuu-xi2uWbJcRYMCRhrsnAPHRvPPaF92i94eZ/exec", {
-    
-    method: "POST",
-    body: datos,
-  })
-    .then(res => {
-      console.log("Estado HTTP:", res.status); // Registrar el estado (200, 403, etc.)
-      return res.text();
-    })
-    .catch(error => {
-      console.error("Error al enviar:", error); // Mostrar error detallado
-      alert("Hubo un error al enviar el mensaje.");
-    });
-  
-})
 
 
   
