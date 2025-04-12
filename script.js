@@ -47,24 +47,25 @@ const form = document.getElementById("formulario-contacto");
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // Evita el envío normal del formulario
 
+
   const datos = new FormData(form);
-  
-  fetch("https://script.google.com/macros/s/AKfycbzz-DukvmTXwSACD34_pNT5TJMm6ahMuu-xi2uWbJcRYMCRhrsnAPHRvPPaF92i94eZ/exec", {
+console.log("Datos enviados:", [...datos.entries()]);
+
+fetch("https://script.google.com/macros/s/AKfycbzz-DukvmTXwSACD34_pNT5TJMm6ahMuu-xi2uWbJcRYMCRhrsnAPHRvPPaF92i94eZ/exec", {
+    
     method: "POST",
-    body: datos, // Enviar datos del formulario
+    body: datos,
   })
-    .then(res => res.text())
-    .then(data => {
-      console.log(data); // Confirmar la respuesta del Apps Script
-      alert(data); // Mostrar mensaje recibido del Apps Script
-      form.reset(); // Limpiar formulario
+    .then(res => {
+      console.log("Estado HTTP:", res.status); // Registrar el estado (200, 403, etc.)
+      return res.text();
     })
     .catch(error => {
-      console.error("Error al enviar:", error); // Registrar error
+      console.error("Error al enviar:", error); // Mostrar error detallado
       alert("Hubo un error al enviar el mensaje.");
     });
-});
-
+  
+})
 
 
   
