@@ -9,15 +9,17 @@
         html {
             scroll-behavior: smooth;
         }
+
+
         /* *********************/
         /* seccion I N I C I O */
         /* *********************/
-        
         #inicio {
             background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("img/fondo-inicio.jpg");
             background-size: cover;
             background-position: center center;
             height: 100vh;
+
         }
         
         #inicio .contenido header {
@@ -133,10 +135,12 @@
             color: #fff;
             display: none;
         }
+
+        
+
         /* *********************/
         /* seccion S O B R E  M I */
         /* *********************/
-        
         #sobremi {
             max-width: 1100px;
             margin: auto;
@@ -148,13 +152,15 @@
         #sobremi .contenedor-foto {
             max-width: 400px;
             margin-right: 80px;
+           
         }
         
         #sobremi .contenedor-foto img {
             padding: 20px;
             width: 100%;
-            border-radius: 20px;
+            border-radius: 5px;
             background-color: #f3f3f3;
+            
         }
         
         #sobremi .sobremi {
@@ -168,6 +174,7 @@
             text-decoration: underline;
             text-decoration-color: #d3d3d3;
             text-decoration-thickness: 5px;
+         
         }
         
         #sobremi .sobremi h2 {
@@ -210,11 +217,14 @@
         #sobremi .sobremi a:hover {
             background-color: #ff5080;
             color: #fff;
+            border-radius: 5px;
         }
+
+
+
         /* *********************/
         /* seccion S E R V I C I O S */
         /* *********************/
-        
         #servicios {
             padding: 100px 15px;
             text-align: center;
@@ -229,76 +239,83 @@
             text-decoration: underline;
             text-decoration-color: #d3d3d3;
             text-decoration-thickness: 5px;
+            margin-bottom: 60px;
         }
         
-        #servicios .fila {
+        /* Nuevo diseño tipo bloque horizontal */
+        .servicio-detallado {
             display: flex;
-            justify-content: space-between;
-            max-width: 1150px;
-            margin: 30px auto;
-        }
-        
-        #servicios .fila .servicio {
-            max-width: 350px;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 40px auto;
             background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .servicio-detallado:hover{
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .imagen-servicio {
+            flex: 1;
+        }
+        
+        .imagen-servicio img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-height: 250px;
+        }
+        
+        .contenido-servicio {
+            flex: 2;
             padding: 30px;
-            margin: 0 5px;
-            border-radius: 5px;
-            transition: .5s;
         }
         
-        #servicios .fila .servicio:hover {
-            box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
+        .contenido-servicio h4 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #111135;
         }
         
-        #servicios .fila .servicio .icono {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #d3d3d3;
-            padding: 20px;
-            margin-bottom: 25px;
+        .contenido-servicio .cita {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
         }
         
-        #servicios .fila .servicio h4 {
-            font-size: 22px;
-            margin-bottom: 25px;
+        .contenido-servicio p {
+            font-size: 16px;
+            line-height: 1.6;
         }
         
-        #servicios .fila .servicio hr {
-            width: 30%;
-            margin: auto;
-            color: #000;
-            margin-bottom: 25px;
-        }
-        
-        #servicios .fila .servicio ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 10px;
-        }
-        
-        #servicios .fila .servicio p {
-            font-size: 14px;
-            line-height: 22px;
-        }
+
+
         /* *********************/
         /* seccion S K I L L S */
         /* *********************/
-        
         .contenedor-skills {
-            background: linear-gradient( #eb5a5acc, rgba(33, 16, 16, 0.8)), url("img/fondo-skills.jpg");
+            background: linear-gradient( #f48f8f, rgba(33, 16, 16, 0.8)), url("img/fondo-skills.jpg");
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
-            color: #fff;
+            color: black;
             background-position: center center;
             padding: 100px 0;
             text-align: center;
         }
         
+        #skills .titulo-seccion{
+            text-decoration: underline;
+            text-decoration-color: #d3d3d3;
+            text-decoration-thickness: 5px;
+        }
         .contenedor-skills .skill {
             max-width: 600px;
             margin: 30px auto;
@@ -314,39 +331,46 @@
             margin-right: 20px;
             height: 10px;
             width: 10px;
-            background-color: #fff;
+            background-color: black;
         }
         
         .contenedor-skills .skill .barra {
-            background-color: #919191;
+            background-color: white;
             width: 100%;
             height: 6px;
             margin: 10px 0px;
         }
         
-        .contenedor-skills .skill .barra .barra-progreso1 {
-            background-color: #fff;
-            width: 95%;
+        .barra-progreso1 {
+            background-color: black;
+            width: 80%;
             height: 6px;
             animation: progreso1 2s forwards;
         }
         
-        .contenedor-skills .skill .barra .barra-progreso2 {
-            background-color: #fff;
+         .barra-progreso2 {
+            background-color: black;
             width: 80%;
             height: 6px;
             animation: progreso2 2s forwards;
         }
         
-        .contenedor-skills .skill .barra .barra-progreso3 {
-            background-color: #fff;
+         .barra-progreso3 {
+            background-color: black;
             width: 75%;
             height: 6px;
             animation: progreso3 2s forwards;
         }
         
-        .contenedor-skills .skill .barra .barra-progreso4 {
-            background-color: #fff;
+         .barra-progreso4 {
+            background-color: black;
+            width: 80%;
+            height: 6px;
+            animation: progreso4 2s forwards;
+        }
+
+        .barra-progreso5 {
+            background-color: black;
             width: 80%;
             height: 6px;
             animation: progreso4 2s forwards;
@@ -357,7 +381,7 @@
                 width: 0;
             }
             100% {
-                width: 95%;
+                width: 80%;
             }
         }
         
@@ -387,16 +411,107 @@
                 width: 80%;
             }
         }
+
+        @keyframes progreso5 {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 80%;
+            }
+        }
+
+
+
+          /* *********************/
+        /* seccion LENGUAJES */
+        /* *********************/
+        .contenedor-lenguages{
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: black;
+            background-position: center center;
+            padding: 100px 0;
+            text-align: center;
+            
+        }
+
+        .contenedor-lenguages .lenguage {
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        #lenguages .titulo-seccion{
+            text-decoration: underline;
+            text-decoration-color: #d3d3d3;
+            text-decoration-thickness: 5px;
+        }
+
+        .contenedor-lenguages .lenguage .info {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .contenedor-lenguages .lenguage .list {
+            display: inline-block;
+            margin-right: 20px;
+            height: 10px;
+            width: 10px;
+            background-color: black;
+        }
+        
+        .contenedor-lenguages .lenguage .barr {
+            background-color: #f48f8fcc;
+            width: 100%;
+            height: 6px;
+            margin: 10px 0px;
+        }
+
+        .contenedor-lenguages .lenguage .barr .barra-progreso5 {
+            background-color: black;
+            width: 95%;
+            height: 6px;
+            animation: progreso5 2s forwards;
+        }
+        
+        .contenedor-lenguages .lenguage .barr .barra-progreso6 {
+            background-color: black;
+            width: 40%;
+            height: 6px;
+            animation: progreso6 2s forwards;
+        }
+
+        @keyframes progreso5 {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 95%;
+            }
+        }
+        
+        @keyframes progreso6 {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 40%;
+            }
+        }
+
+
+
         /* *********************/
         /* seccion P O R T F O L I O */
         /* *********************/
-        
         #portfolio {
             max-width: 1100px;
             padding: 100px 0;
             margin: auto;
+            
         }
-        
+
         #portfolio .titulo-seccion {
             text-align: center;
             font-size: 22px;
@@ -405,28 +520,39 @@
             text-decoration: underline;
             text-decoration-color: #d3d3d3;
             text-decoration-thickness: 5px;
+            padding: 30px;
+          
         }
-        
+
         #portfolio .fila {
             display: flex;
-            justify-content: space-between;
-            margin: 30px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
         
         #portfolio .fila .proyecto {
-            max-width: 450px;
-            border: 1px solid #000;
-            margin: 0 10px;
+            width: 300px;
+            border: 2px solid #000;
             position: relative;
             overflow: hidden;
+            border-radius: 8px;
+            background-color: #1a1a1a;
+            color: white;
+            padding-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        
+        #portfolio .fila .proyecto:hover {
+            transform: scale(1.03);
         }
         
         #portfolio .fila .proyecto img {
             width: 100%;
-            height: 100%;
-            ;
-            filter: grayscale(1);
+            height: 200px;
             object-fit: cover;
+            filter: grayscale(1);
             transition: .5s;
         }
         
@@ -434,34 +560,41 @@
             filter: grayscale(0);
         }
         
-        #portfolio .fila .proyecto .info {
-            position: absolute;
-            left: 0px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #ff5080;
-            width: 100%;
+        #portfolio .fila .info {
             padding: 10px;
-            opacity: 0;
-            bottom: -40px;
-            transition: .5s;
+            background-color: #000;
+            text-align: center;
         }
         
-        #portfolio .fila .proyecto:hover .info {
-            opacity: 1;
-            bottom: 0;
+        .ver-mas-btn {
+            margin: 10px auto 0;
+            display: block;
+            padding: 6px 12px;
+            border: none;
+            background-color: #ff5080;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-
-        #jsb {
-            background-color: #fff;
-            width: 75%;
-            height: 6px;
-            animation: progreso3 2s forwards;
+        
+        .ver-mas-btn:hover {
+            background-color: #e0446d;
         }
+        
+        .descripcion {
+            display: none;
+            margin: 10px 15px 0;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #d1d1d1;
+        }
+        
+        
         
         /* *********************/
         /* seccion C O N T A C T O */
         /* *********************/
-        
         #contacto {
             padding: 100px 15px;
             background-color: #f3f3f3;
@@ -488,7 +621,7 @@
         #contacto .contenedor-form input,
         #contacto .contenedor-form textarea {
             padding: 20px;
-            border-radius: 20px;
+            border-radius: 15px;
             border: none;
             border: 1px solid #919191;
         }
@@ -520,13 +653,41 @@
         }
         
         #contacto .btn-enviar:hover {
-            background-color: #ff5080;
+            background-color: black;
             color: #fff;
+            border-radius: 5px;
         }
+
+        .mensaje-estado {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+        
+        .exito {
+            display: block;
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .error {
+            display: block;
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .btn-enviar:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+
+
         /* *********************/
         /* seccion F O O T E R */
         /* *********************/
-        
         footer {
             background-color: #000;
             color: #fff;
@@ -541,10 +702,52 @@
             margin: 5px;
             font-size: 26px;
         }
+
+
+
+         /* *********************/
+        /* seccion CLARO/OSCURO */
+        /* *********************/
+        /*Color claro-oscuro*/
+        #toggle-dark-mode {
+
+            top: 20px;
+            right: 20px;
+            color: #000;
+            z-index: 1000;
+            }
+          
+                body.dark-mode #toggle-dark-mode {
+                color: #fff;
+            }
+          
+               /* Estilo base del botón/icono */
+               #toggle-dark-mode {
+        
+               top: 20px;
+               right: 20px;
+               font-size: 24px;
+               color: #333;
+               z-index: 1000;
+               cursor: pointer;
+               transition: color 0.3s ease;
+            }
+          
+          body.dark-mode #toggle-dark-mode {
+            color: #f2f2f267;
+          }
+          
+          /* Modo oscuro sutil */
+          body.dark-mode {
+            background-color: #f2f2f267; /* fondo ligeramente más oscuro */
+            filter: none; /* Aplica un efecto general de oscurecimiento */
+          }
+  
+          
+
         /* *********************/
         /* seccion R E S P O N S I V E */
         /* *********************/
-        
         @media screen and (max-width: 800px) {
             .redes {
                 display: none;
@@ -630,3 +833,5 @@
                 margin-bottom: 15px;
             }
         }
+
+        

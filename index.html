@@ -18,29 +18,26 @@
             <header>
                 <div class="contenido-header">
                     <h1>/R☻Y/</h1>
-                    <nav id="nav" class="">
+                    <nav  id="nav" class="">
                         <ul id="links">
-                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">HOME</a></li>
-                            <li><a href="#sobremi" onclick="seleccionar(this)">ABOUT</a></li>
-                            <li><a href="#servicios" onclick="seleccionar(this)">SERVICES</a></li>
-                            <li><a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a></li>
-                            <li><a href="#contacto" onclick="seleccionar(this)">CONTACT</a></li>
+                          <li><a href="#inicio"><i class="fas fa-house fa-xs"></i> HOME</a></li>
+                          <li><a href="#sobremi"><i class="fas fa-user fa-xs"></i> ABOUT</a></li>
+                          <li><a href="#servicios"><i class="fas fa-cogs fa-xs"></i> SERVICES</a></li>
+                          <li><a href="#skills"><i class="fas fa-brain fa-xs"></i> SKILLS</a></li>
+                          <li><a href="#lenguages"><i class="fas fa-language fa-xs"></i> LANGUAGES</a></li>
+                          <li><a href="#portfolio"><i class="fas fa-briefcase fa-xs"></i> PORTFOLIO</a></li>
+                          <li><a href="#contacto"><i class="fas fa-envelope fa-xs"></i> CONTACT</a></li>
                         </ul>
-                    </nav>
+                      </nav>
+                   
 
-                    <!-- Icono del menu responsive -->
-                    <div id="icono-nav" onclick="responsiveMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
-
-                    
-
-                    
-                     
                     <div class="redes">
                         
                         <a href="https://www.facebook.com/share/1BhVhSYt5v/"><i class="fa-brands fa-facebook"></i></a>
-                    
+                        <a href="https://github.com/RoyRosalesGomez" target="_blank"> <i class="fa-brands fa-github"></i></a>
+                        <i id="toggle-dark-mode" class="fas fa-moon" style="cursor: pointer; font-size: 17px; color: white;"></i>
+
+
                     </div>
                 </div>
             </header>
@@ -52,6 +49,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- SECCION S O B R E M I -->
     <section id="sobremi">
@@ -65,98 +63,68 @@
             <p>Hi, I'm Roy Rosales, a web developer passionate about creating functional, intuitive, and visually compelling digital solutions. </p>
             <p>I specialize in developing modern web applications using technologies such as HTML, CSS, JavaScript, React, and TypeScript, and I love staying up-to-date with the latest trends in design and development.</p>
             <p>I enjoy transforming ideas into interactive experiences, taking care of both the frontend and the logic behind the code. I consider myself a proactive, detail-oriented person eager to continue growing in the development world.</p>
-            <a href="#">Descargar CV</a>
+            <a href="Roy-Rosales-Gómez-CV.pdf" download="CV-Roy-Rosales.pdf" class="btn-descargar">Descargar CV</a>
         </div>
     </section>
+
 
     <!-- SECCION S E R V I C I O S -->
     <section id="servicios">
         <h3 class="titulo-seccion">MY SERVICES</h3>
-        <div class="fila">
-            <div class="servicio">
-                <span class="icono"> <i class="fa-solid fa-code"></i></span>
-                <h4>Diseño de Sitios Web</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Web</li>
-                    <li>Graphic</li>
-                    <li>SEO</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatibus rem illum sunt, asperiores!</p>
+    
+        <div class="servicio-detallado">
+            <div class="imagen-servicio">
+                <img src="img/desarrollo.png" alt="Desarrollo Web">
             </div>
-            <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-file-code"></i></span>
-                <h4>Porgramación PHP</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Web</li>
-                    <li>Graphic</li>
-                    <li>SEO</li>
-                </ul>
-                <p>I have been providing web design services with great success for 9 years. The client is very happy</p>
-            </div>
-            <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-arrow-trend-up"></i></span>
-                <h4>Posicionamiento SEO</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Web</li>
-                    <li>Graphic</li>
-                    <li>SEO</li>
-                </ul>
-                <p>I have been providing web design services with great success for 9 years. The client is very happy</p>
+            <div class="contenido-servicio">
+                <h4>Desarrollo Backend</h4>
+                <p class="cita">“Un sitio web profesional no solo representa tu marca, es tu carta de presentación al mundo.”</p>
+                <p>Como desarrollador backend, ofrezco la creación e integración de toda la lógica que hace que tu aplicación funcione de manera eficiente y segura.</p>
+                <p>Me encargo de diseñar y desarrollar APIs robustas (REST) que conectan el frontend con la base de datos, implementar la autenticación y autorización de usuarios, y optimizar el rendimiento para soportar gran volumen de tráfico.</p>
             </div>
         </div>
-        <div class="fila">
-            <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-database"></i></span>
-                <h4>Alojamiento de Sitios</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Web</li>
-                    <li>Graphic</li>
-                    <li>SEO</li>
-                </ul>
-                <p>I have been providing web design services with great success for 9 years. The client is very happy</p>
+    
+        <div class="servicio-detallado">
+            <div class="imagen-servicio">
+                <img src="img/desarro.jpg" alt="Diseño Gráfico">
             </div>
-            <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-palette"></i></span>
-                <h4>Diseñador Gráfico</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Web</li>
-                    <li>Graphic</li>
-                    <li>SEO</li>
-                </ul>
-                <p>I have been providing web design services with great success for 9 years. The client is very happy</p>
-            </div>
-            <div class="servicio">
-                <span class="icono"><i class="fa-solid fa-person-circle-question"></i></span>
-                <h4>Consultor Externo</h4>
-                <hr>
-                <ul class="servicios-tag">
-                    <li>Web</li>
-                    <li>Graphic</li>
-                    <li>SEO</li>
-                </ul>
-                <p>I have been providing web design services with great success for 9 years. The client is very happy</p>
+            <div class="contenido-servicio">
+                <h4>Desarrollo Front</h4>
+                <p class="cita">“El diseño no es solo lo que ves, es cómo funciona.”</p>
+                <p>Como desarrollador frontend, me encargo de transformar tus ideas en interfaces interactivas y atractivas que encanten a tus usuarios.</p>
+                <p>Utilizo HTML5, CSS3 y JavaScript (con frameworks como React) para construir componentes reutilizables, garantizar la accesibilidad y asegurar una experiencia fluida en todos los dispositivos.</p>
             </div>
         </div>
+
     </section>
+    
+    
 
     <!-- SECCION H A B I L I D A D E S -->
     <div class="contenedor-skills" id="skills">
-        <h3>SKILLS </h3>
+        <h3 class="titulo-seccion">SKILLS </h3>
         <div class="skill">
             <div class="info">
                 <p> <span class="lista"> </span>Html & Css</p>
-                <span class="porcentaje">95%</span>
+                <span class="porcentaje">80%</span>
             </div>
 
             <div class="barra">
-                <div class="" id="html"></div>
+                <div class="barra-progreso1" id="html"></div>
             </div>
         </div>
+
+        <div class="skill">
+            <div class="info">
+                <p> <span class="lista"> </span>React</p>
+                <span class="porcentaje">80%</span>
+            </div>
+
+            <div class="barra">
+                <div class="barra-progreso5" id="rt"></div>
+            </div>
+        </div>
+
         <div class="skill">
             <div class="info">
                 <p> <span class="lista"> </span>Javascript</p>
@@ -164,7 +132,7 @@
             </div>
 
             <div class="barra">
-                <div class="" id="js"></div>
+                <div class="barra-progreso2" id="js"></div>
             </div>
         </div>
         <div class="skill">
@@ -176,6 +144,7 @@
             <div class="barra">
                 <div class="barra-progreso3" id="jsb"></div>
             </div>
+
         </div>
         <div class="skill">
             <div class="info">
@@ -184,129 +153,172 @@
             </div>
 
             <div class="barra">
-                <div class="" id="bd"></div>
+                <div class="barra-progreso4" id="bd"></div>
             </div>
         </div>
         
         </div>
     </div>
 
-    <!-- SECCION PORTAFOLIO -->
+
+    <!-- SECCION LENGUAJES -->
+    <div class="contenedor-lenguages" id="lenguages">
+        <h3  class="titulo-seccion">LANGUAGES</h3>    
+     <div class="lenguage">
+        <div class="info">
+            <p> <span class="list"> </span>Espanish</p>
+            <span class="porcentaje">95%</span>
+        </div>
+
+        <div class="barr">
+            <div class="" id="esp"></div>
+        </div>
+     </div>
+
+     <div class="lenguage"> 
+        <div class="info">
+            <p> <span class="list"> </span>English</p>
+            <span class="porcentaje">40%</span>
+        </div>
+
+        <div class="barr">
+            <div class="" id="eng"></div>
+        </div>
+    </div>
+   </div>
+
+    
+   
+   <!-- SECCION PORTAFOLIO -->
     <section id="portfolio">
         <h3 class="titulo-seccion">My Proyects</h3>
         <div class="fila">
+
+            <!-- Proyecto 1 -->
             <div class="proyecto">
                 <div class="overlay"></div>
-                <img src="img/proyecto1.jpg" alt="">
+                <img src="img/proyecto0.jpg" alt="">
                 <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
+                    <h5><a href="https://p-g-ced2danier.vercel.app/" target="_blank">Ver sitio</a></h5>
+                    <p>Página principal CEDIAM</p>
+                </div>
+                <button class="ver-mas-btn">Ver más</button>
+                <div class="descripcion">
+                    <p>Este sitio muestra la página principal de CEDIAM con secciones informativas, para ayudar al usuario a entender en que consiste el centro.</p>
+                    <p>Ademas de sus formularios en los cuales se pueden hacer diferentes solicitudes.</p>
                 </div>
             </div>
+    
+            <!-- Proyecto 2 -->
             <div class="proyecto">
                 <div class="overlay"></div>
-                <img src="img/proyecto2.jpg" alt="">
+                <img src="img/proyect0.jpg" alt="">
                 <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
+                    <h5><a href="https://dashboard-cediam.vercel.app/" target="_blank">Ver sitio</a></h5>
+                    <p>Dashboard CEDIAM</p>
+                </div>
+                <button class="ver-mas-btn">Ver más</button>
+                <div class="descripcion">
+                    <p>Panel de administración para gestionar los modulos de donaciones, volunytariado, asociados y beneficiario.</p>
                 </div>
             </div>
+    
+            <!-- Proyecto 3 -->
             <div class="proyecto">
                 <div class="overlay"></div>
                 <img src="img/proyecto3.jpg" alt="">
                 <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
+                    <h5><a href="https://landing-pi-pink.vercel.app/" target="_blank">Ver sitio</a></h5>
+                    <p>Landing Page</p>
                 </div>
-            </div>
-        </div>
-        <div class="fila">
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/proyecto4.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/proyecto5.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/proyecto6.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-        </div>
-        <div class="fila">
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/proyecto7.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/proyecto8.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <div class="overlay"></div>
-                <img src="img/proyecto9.jpg" alt="">
-                <div class="info">
-                    <h4>Descripcion Proyecto</h4>
-                    <p>Diseño Web</p>
+                <button class="ver-mas-btn">Ver más</button>
+                <div class="descripcion">
+                    <p>Landing Page de presentación de productos y servicios con un diseño moderno y profesional pensado para captar la atención de tu audiencia desde el primer vistazo.</p>
                 </div>
             </div>
         </div>
     </section>
+    
+    
+    
 
     <!-- SECCTION C O N T A C T O -->
     <section id="contacto">
-        <h3 class="titulo-seccion">Contactanos ahora</h3>
+        <h3 class="titulo-seccion">Contact us now</h3>
         <div class="contenedor-form">
-            <form action="">
+            <form id="formulario-contacto">
                 <div class="fila mitad">
-                    <input type="text" placeholder="Nombre Completo *" class="input-mitad">
-                    <input type="email" placeholder="Dirección de Email" class="input-mitad">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo *" class="input-mitad" required>
+                    <input type="email" id="email" name="email" placeholder="Dirección de Email" class="input-mitad" required>
                 </div>
                 <div class="fila">
-                    <input type="text" placeholder="Tema..." class="input-full">
+                    <input type="text" id="tema" name="tema" placeholder="Tema..." class="input-full">
                 </div>
                 <div class="fila">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+                    <textarea id="mensaje" name="mensaje" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full" required></textarea>
                 </div>
-
-                <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+    
+                <input type="submit" value="Enviar Mensaje" class="btn-enviar" id="btn-enviar">
+                <div id="mensaje-estado" class="mensaje-estado"></div>
             </form>
         </div>
+        
+        <!-- Scripts de EmailJS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     </section>
+
 
     <!-- SECCION FOOTER -->
     <footer>
         <p>Todos los derechos reservados - 2025</p>
         <div class="redes">
-            
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        
+            <a href="#"><i class="fa-brands fa-github"></i></a>
         </div>
-
     </footer>
 
-    <script src="script.js"></script>
-</body>
 
+    <script>
+        const toggle = document.getElementById('toggle-dark-mode');
+        const body = document.body;
+      
+        // Verifica si hay un tema guardado
+        const savedTheme = localStorage.getItem('theme');
+      
+        if (savedTheme === 'dark') {
+          body.classList.add('dark-mode');
+          toggle.classList.remove('fa-moon');
+          toggle.classList.add('fa-sun');
+        }
+      
+        toggle.addEventListener('click', () => {
+          body.classList.toggle('dark-mode');
+      
+          const isDark = body.classList.contains('dark-mode');
+      
+          // Cambia el ícono
+          toggle.classList.toggle('fa-moon', !isDark);
+          toggle.classList.toggle('fa-sun', isDark);
+      
+          // Guarda la preferencia
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+      </script>
+      
+      
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <script>
+        const botones = document.querySelectorAll('.ver-mas-btn');
+        botones.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const desc = btn.nextElementSibling;
+                desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+            btn.textContent = desc.style.display === 'block' ? 'Ver menos' : 'Ver más';
+            });
+        });
+    </script>
+</body>
 </html>
